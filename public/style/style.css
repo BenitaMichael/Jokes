@@ -4,13 +4,22 @@
     padding:0;
 }
 
-header{
+header, footer{
     padding: 20px;
     text-align: center;
+    color: rgba(0, 0, 0);
+}
+
+header{
     height: 18vh;
     background-image: linear-gradient(#1e847f, #ecc19c);
     border-bottom: 2px solid #ecc19c;
-    color: rgba(0, 0, 0);
+}
+
+footer{
+    height: 12vh;
+    background-image: linear-gradient(#ecc19c, #1e847f);
+    border-top: 1px solid #ecc19c;
 }
 
 header h1{
@@ -22,15 +31,6 @@ main{
     height: 70vh;
     padding: 20px;
     text-align: center;
-}
-
-footer{
-    padding: 20px;
-    text-align: center;
-    height: 12vh;
-    background-image: linear-gradient(#ecc19c, #1e847f);
-    border-top: 1px solid #ecc19c;
-    color: rgba(0, 0, 0);
 }
 
 main{
@@ -92,7 +92,7 @@ main h1{
     border-radius: 5px;
 }
 .card-info {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-around;
 }
