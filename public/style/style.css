@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+header{
+    padding: 20px;
+    text-align: center;
+    height: 18vh;
+    background-image: linear-gradient(#1e847f, #ecc19c);
+    border-bottom: 2px solid #ecc19c;
+    color: rgba(0, 0, 0);
+}
+
+header h1{
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+main{
+    height: 70vh;
+    padding: 20px;
+    text-align: center;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    height: 12vh;
+    background-image: linear-gradient(#ecc19c, #1e847f);
+    border-top: 1px solid #ecc19c;
+    color: rgba(0, 0, 0);
+}
+
+main{
+    background-image: url('images/general.jpg');
+    background-size: auto;
+    object-fit: contain;
+}
+
+
+main h1{
+    padding-top: 2rem;
+    font-size: 3rem;
+}
+
+.container {
+    height: 100%;
+    width: 70%;
+    max-width: 570px;
+    margin: -6rem auto;
+    padding:0;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 80px;
+    grid-column-gap: 10px;
+}
+.form-submit {
+    outline: none;
+    border: 1px solid rgb(232, 232, 232);
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 36px;
+}
+.form-submit:focus {
+    box-shadow: 0 0 0 0.5px rgb(153, 153, 153);
+}
+
+.cards {
+    display: flex;
+    margin: 20px 0;
+    width: 100%;
+}
+.card-item {
+    width: 100%;
+    padding: 5px 20px 20px;
+    border: 1px solid rgb(232, 232, 232);
+    background-color: white;
+    border-radius: 5px;
+}
+.card-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-body{
+    width: 300px;
+    word-wrap: break-word;
+}
+.card-category {
+    line-height: 1.2;
+    margin-top: 10px;
+}
+.tag-error {
+    width: 100%;
+    text-align: center;
+}
+
+
+  @media (max-width: 620px) {
+    .container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .form {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+  }
+  

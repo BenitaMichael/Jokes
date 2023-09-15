@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <header>
+        <h1><em>Welcome!!</em></h1>
+    </header>
+
+    <main>
+
+        <h1> <%= content %> &#128516</h1>
+
+        <div class="container">
+        
+        <form action="/submit" id="form" class="form" method="POST">
+            <select name="category" class="form-select">
+                <option value="" data-display="Select">What are you in the mood for?</option>
+                <option value="any">Any</option>
+                <option value="programming">Programming</option>
+                <option value="pun">Pun</option>
+                <option value="spooky">Spooky</option>
+                <option value="christmas">Christmas</option>
+              </select>
+              <button type="submit" class="form-submit">Select</button>
+        </form>
+
+        <section id="cards" class="cards">
+            <article class="card-item">
+              <% if (locals.joke) { %>
+                <h2 class="card-category"> <%= joke.category %> </h2>
+
+                <div class="card-info">
+                  <h4 class="card-type">Joke type:<%= joke.type %></h4>
+                  <% if (joke.type == "twopart") { %>
+                    <div class="card-body">
+                   <h4>Setup: <%= joke.setup %></h4>
+                    </br>
+                   <p>Delivery: <%= joke.delivery %></p>
+                  </div>
+                  <% }else{ %>
+                    <div class="card-body">
+                  <p><%= joke.joke %></p>
+                  </div>
+                  <% } %>
+                </div>
+              
+              <% } else { %>
+                <div id="tag-error" class="tag-error">
+                  
+                </div>
+                <% } %>
+            </article>
+      
+          </section>
+    </div>
+    </main>
+
+    <footer>
+        <h4>Copyright <em>Bunnie's Tech</em> </h4>
+    </footer>
+</body>
+</html>
